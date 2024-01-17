@@ -1,3 +1,0 @@
-const headerStyle = {
-    <header></header>
-}
