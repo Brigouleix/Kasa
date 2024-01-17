@@ -4,4 +4,20 @@
     width: 100%;
     height: 150px;
     object-fit: cover;
+    filter: brightness(50%);
+    
+}
+
+
+.texte {
+    position: relative;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    
+    transform: translate(-50%, -50%);
+    color: rgb(255, 255, 255);
+    font-size: 3em;
+    text-align: center;
+   
 }

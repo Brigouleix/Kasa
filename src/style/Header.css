@@ -7,10 +7,9 @@
 
 .nav-link {
     display: flex;
-    text-decoration: none;
+    text-decoration-color: #FF6060;
     justify-content: space-between;
     width: 12%;
     text-decoration-color: #9e7370ec;
 
 }
-

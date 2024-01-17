@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 import Header from "../components/header"
 import Footer from "../components/footer";
+import BannerAbout from '../components/bannerAbout';
 
 
 const AboutPage = () => {
@@ -16,7 +17,7 @@ const AboutPage = () => {
       
       <div>
 
-        <h1>A PROPOS</h1>
+        <BannerAbout />
 
       </div>
       <div>

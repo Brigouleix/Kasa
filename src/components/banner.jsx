@@ -8,6 +8,8 @@ function Banner() {
        
         <div >
             <img className= "img-banner" src={banniere} alt="Bannière de la page d'accueil" />
+            <div class="texte">Chez vous, partout et ailleurs</div>
+        
         </div>
     );
 }

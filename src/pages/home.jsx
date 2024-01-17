@@ -20,11 +20,7 @@ const HomePage = () => {
       <Header />
       </header>
       
-        <div>
-
-          <h1>Bienvenue sur notre site de logements</h1>
-
-        </div>
+        
 
       <Body />
       
