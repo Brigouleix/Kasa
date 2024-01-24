@@ -5,6 +5,7 @@ import HomePage from './pages/home.jsx';
 
 import ErrorPage from './pages/error.jsx';
 import AboutPage from './pages/about.jsx';
+import ProprietyPage from './pages/propriety.jsx';
 
 
 const App = () => {
@@ -13,6 +14,7 @@ const App = () => {
       <Route path="/" element={<HomePage />} />
       <Route path="/error" element={<ErrorPage />} />
       <Route path="/about" element={<AboutPage />} />
+      <Route path="/propriety" element={<ProprietyPage />} />
     </Routes>
   );
 };
