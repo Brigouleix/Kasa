@@ -21,6 +21,10 @@ const AboutPage = () => {
 
       </div>
       <div>
+        <BodyAbout />
+      </div>
+
+      <div>
 
         <Footer />
         
