@@ -12,9 +12,9 @@ const App = () => {
   return (
     <Routes>
       <Route path="/" element={<HomePage />} />
-      <Route path="/error" element={<ErrorPage />} />
       <Route path="/about" element={<AboutPage />} />
       <Route path="/propriety" element={<ProprietyPage />} />
+      <Route path="*" element={<ErrorPage />} />
     </Routes>
   );
 };
