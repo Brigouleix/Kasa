@@ -2,11 +2,15 @@ import React from "react";
 
 import Banner from "../components/banner"; 
 
-// Body.jsx
 
 import Card from "../components/card";
 
-import "../style/Body.css"; // Assurez-vous d'avoir le bon chemin vers votre fichier de style SCSS
+import "../style/Body.css"; 
+
+
+import data from "../assets/data"
+
+
 
 const cardsData = [
     {
@@ -47,7 +51,7 @@ const Body = () => {
     <div className="body">
       <Banner />
       <div className="cards-container">
-        {cardsData.map((card, index) => (
+        {data.map((card, index) => (
           <Card key={index} {...card} />
         ))}
       </div>

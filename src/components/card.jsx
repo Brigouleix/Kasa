@@ -1,11 +1,14 @@
 
 import React from 'react';
 import "../style/Card.css"; 
+import data from '../assets/data';
 
-const Card = ({ title, description, imageSrc }) => {
+
+
+const Card = ({ title, description, cover }) => {
   return (
     <div className="card">
-      <img src={imageSrc} alt={title} />
+      <img src={cover} alt={title} />
       <h3>{title}</h3>
       
     </div>
