@@ -6,6 +6,7 @@ import HomePage from './pages/home.jsx';
 import ErrorPage from './pages/error.jsx';
 import AboutPage from './pages/about.jsx';
 import ProprietyPage from './pages/propriety.jsx';
+import LogementPage from "./pages/logement.jsx";
 
 
 const App = () => {
@@ -14,6 +15,7 @@ const App = () => {
       <Route path="/" element={<HomePage />} />
       <Route path="/about" element={<AboutPage />} />
       <Route path="/propriety" element={<ProprietyPage />} />
+      <Route path="/logement" element={<LogementPage />} />
       <Route path="*" element={<ErrorPage />} />
     </Routes>
   );

@@ -1,0 +1,50 @@
+.localisation {
+    display: flex;
+
+}
+
+.volets-logement {
+ 
+    margin: 10px;
+    width: 50%;
+    color: white;
+    
+    .title {
+      background: #FF6060;
+      display: flex;
+      justify-content: space-between;
+      padding: 5px;
+      border-radius: 5px ;
+      height: 35px;
+      align-items: center;
+    }
+    
+    
+    
+    
+    .description-logement {
+      color: #FF6060;
+      background: rgb(128, 128, 128, 0.1);
+      padding: 10px;
+      display: block;
+      border-radius: 0 0 5px 5px;
+    }
+  }
+  
+  .scroll-down {
+    cursor: pointer;
+    font-size: 18px;
+    margin-left: 10px;
+    transition: transform 0.3s ease; 
+  }
+  
+  
+  .scroll-down.rotated {
+    transform: rotate(-180deg);
+  }
+
+ .volet-container-logement {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+ }

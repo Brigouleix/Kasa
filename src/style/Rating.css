@@ -1,0 +1,9 @@
+/* Ajoutez ces styles à votre fichier CSS */
+.star-filled {
+    color: #ff6060; /* Couleur de l'étoile remplie */
+  }
+  
+  .star-empty {
+    color: #ccc; /* Couleur de l'étoile vide */
+  }
+  
