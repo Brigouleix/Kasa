@@ -1,8 +1,6 @@
 /* BodyAbout.css */
 
-.bodyAbout {
-  padding: 5% 10%;
-}
+
 
 
 
@@ -11,7 +9,7 @@
   margin: 10px;
   
   color: white;
-
+  width: 80%;
   .title {
     background: #FF6060;
     display: flex;
@@ -32,6 +30,12 @@
     display: block;
     border-radius: 0 0 5px 5px;
   }
+}
+
+.volet-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .scroll-down {

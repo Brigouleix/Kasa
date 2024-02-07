@@ -5,8 +5,8 @@
 
 .volets-logement {
  
-    margin: 10px;
-    width: 50%;
+    margin: 10px 0px 10px 0px;
+    width: 46%;
     color: white;
     
     .title {
@@ -45,6 +45,7 @@
 
  .volet-container-logement {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 100%;
  }
+ 

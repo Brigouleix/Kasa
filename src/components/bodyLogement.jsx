@@ -25,7 +25,7 @@ const BodyLogement = () => {
         
         <Carousel pictures={card.pictures} />
         <RatingStars card={card} />
-        <InfoLogement InfoLogement={card} />
+        <InfoLogement card={card} />
       </div>
     );
   };

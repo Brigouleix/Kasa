@@ -6,21 +6,20 @@ import data from "../assets/data";
 
 
 
-const cardsData = [
-    {
-      title: "Description",
-      description: data[0].description,
-    },
-    {
-      title: "Equipements",
-      description: data[0].equipments,
-    },
-   
-];
+
   
 
-const InfoLogement = () => {
-    
+const InfoLogement = ({ card }) => {
+    const cardsData = [
+        {
+            title: "Description",
+            description: card.description,
+        },
+        {
+            title: "Equipements",
+            description: card.equipments.join(", "), // Join the equipment array into a string
+        },
+    ];
     const [activeDescriptions, setActiveDescriptions] = useState(Array(cardsData.length).fill(false));
     
     const toggleContent = (index) => {

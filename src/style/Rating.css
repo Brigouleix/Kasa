@@ -11,7 +11,7 @@
   .tag {
     display: flex;
     flex-wrap: wrap;
-    gap: 5px;
+    gap: 10px;
   }
   
   .tag-item {
@@ -23,4 +23,31 @@
   .rating-container {
     display: flex;
     justify-content: space-between;
+  }
+
+  .info {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    margin-bottom: 20px;
+  }
+
+.info-loc,p{
+  text-align: inherit;
+}
+  .host {
+    display: flex;
+    
+
+
+  }
+
+  .host-profile {
+    border-radius: 50%;
+   
+  }
+
+  h3 {
+    color: #ff6060;
+    
   }
