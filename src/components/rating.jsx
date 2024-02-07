@@ -1,26 +1,37 @@
-import React, { useState } from "react";
-
+import React from "react";
+import "../style/Rating.css";
 import data from "../assets/data";
-import "../style/Rating.css"
 
+const RatingStars = ({ card }) => {
+  const maxStars = 5;
 
-
-const RatingStars = ({ rating }) => {
-    const maxStars = 5;
-  
-    return (
+  return (
+    <div className="rating-container">
+      <div className="tags-container">
+        
+          <div key={card.id} className="tag">
+            {card.tags.map((tag, index) => (
+              <span key={index} className="tag-item">
+                {tag}
+              </span>
+            ))}
+          </div>
+        
+      </div>
+      
       <div className="rating-stars">
         {[...Array(maxStars)].map((_, index) => (
           <span
             key={index}
-            className={index < rating ? "star-filled" : "star-empty"}
+            className={index < card.rating ? "star-filled" : "star-empty"}
           >
-            &#9733; {/* Utilisez le code HTML du caractère d'étoile Unicode */}
+            &#9733;
           </span>
         ))}
       </div>
-    );
-  };
-  
-  
-  export default RatingStars;
+      
+    </div>
+  );
+};
+
+export default RatingStars;

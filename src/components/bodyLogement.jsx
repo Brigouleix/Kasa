@@ -5,7 +5,7 @@ import Header from './header';
 import data from "../assets/data";
 import InfoLogement from './infosLogement';
 import RatingStars from './rating';
-
+import { useParams } from "react-router-dom";
 
 
 
@@ -15,17 +15,21 @@ import RatingStars from './rating';
 
 
 const BodyLogement = () => {
-    const firstDataItem = data[0]; // Prenez la première entrée de vos données (vous pouvez adapter cela selon votre structure de rendu).
-
+    const { id } = useParams();
+    const card = data.find(
+      (card) => card.id === id
+    );
+    
     return (
       <div>
-        {/* Autres éléments de rendu de vos données ici */}
-        <Carousel pictures={firstDataItem.pictures} />
-        <RatingStars rating={parseInt(data.rating)}/>
-        <InfoLogement />
+        
+        <Carousel pictures={card.pictures} />
+        <RatingStars card={card} />
+        <InfoLogement InfoLogement={card} />
       </div>
     );
   };
   
 
 export default BodyLogement;
+

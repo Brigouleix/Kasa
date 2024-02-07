@@ -1,6 +1,5 @@
-// Carousel.jsx
 import React, { useState } from "react";
-import "../style/Carousel.css"; // Assurez-vous d'ajuster le chemin du fichier CSS selon votre structure de projet.
+import "../style/Carousel.css"; 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleLeft } from '@fortawesome/free-solid-svg-icons';
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
@@ -32,6 +31,7 @@ const Carousel = ({ pictures }) => {
         </div>
       )}
     </div>
+    
   );
 };
 

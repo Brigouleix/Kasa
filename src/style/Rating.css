@@ -4,6 +4,23 @@
   }
   
   .star-empty {
-    color: #ccc; /* Couleur de l'étoile vide */
+    color: #E3E3E3; /* Couleur de l'étoile vide */
   }
   
+
+  .tag {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+  
+  .tag-item {
+    background-color: #ff6060;
+    color: white;
+    padding: 5px;
+    border-radius: 12px;
+  }
+  .rating-container {
+    display: flex;
+    justify-content: space-between;
+  }
