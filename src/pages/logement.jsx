@@ -16,9 +16,9 @@ const LogementPage = () => {
   
       <section>
         
-        <header>
+        <div>
         <Header />
-        </header>
+        </div>
         
           
   

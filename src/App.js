@@ -9,6 +9,8 @@ import ProprietyPage from './pages/propriety.jsx';
 import LogementPage from "./pages/logement.jsx";
 
 
+
+
 const App = () => {
   return (
     <Routes>

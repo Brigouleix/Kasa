@@ -21,7 +21,7 @@ const BodyLogement = () => {
     );
     
     return (
-      <div>
+      <div className="logementBody">
         
         <Carousel pictures={card.pictures} />
         <RatingStars card={card} />

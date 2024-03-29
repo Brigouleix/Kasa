@@ -6,7 +6,7 @@ import "../style/Banner.css"
 function BannerAbout() {
     return (
        
-        <div >
+        <div className= "banner" >
             <img className= "img-banner" src={banniereAbout} alt="Bannière de la page d'accueil" />
         </div>
     );

@@ -1,4 +1,8 @@
 section {
-    display: flex;
+   
+    max-width: 1980px;
+    align-content: center;
+    margin: auto;
     
 }
+

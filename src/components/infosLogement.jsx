@@ -17,7 +17,7 @@ const InfoLogement = ({ card }) => {
         },
         {
             title: "Equipements",
-            description: card.equipments.join(", "), // Join the equipment array into a string
+            description: card.equipments.join(", "), 
         },
     ];
     const [activeDescriptions, setActiveDescriptions] = useState(Array(cardsData.length).fill(false));

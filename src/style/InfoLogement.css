@@ -2,7 +2,9 @@
     display: flex;
 
 }
-
+.logementBody {
+  margin: 15px 30px 15px 30px;
+}
 .volets-logement {
  
     margin: 10px 0px 10px 0px;
@@ -28,6 +30,7 @@
       padding: 10px;
       display: block;
       border-radius: 0 0 5px 5px;
+      
     }
   }
   

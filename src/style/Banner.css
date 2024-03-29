@@ -1,4 +1,9 @@
 .banner {
+    margin: 15px 30px 15px 30px;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
     
 }
 .img-banner {
@@ -7,6 +12,7 @@
     height: 150px;
     object-fit: cover;
     filter: brightness(50%);
+    margin-top: 30px;
     
 }
 
@@ -21,15 +27,3 @@
 }
 
 
-/* texte {
-    position: relative;
-    text-align: center;
-    top: 50%;
-    left: 50%;
-    
-    transform: translate(-50%, -50%);
-    color: rgb(255, 255, 255);
-    font-size: 3em;
-    text-align: center;
-   
-} */

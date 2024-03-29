@@ -51,3 +51,8 @@
     color: #ff6060;
     
   }
+
+  .host-name {
+    width: min-content;
+    margin: 30px;
+  }
