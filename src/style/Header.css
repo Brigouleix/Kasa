@@ -8,9 +8,15 @@
 
 .nav-link {
     display: flex;
+    
    
     justify-content: space-between;
     width: 135px;
+
+    a {
+        color: #FF6060;
+        text-decoration: none;
+    }
     
 
 }
@@ -18,3 +24,4 @@
 header {
     margin: 0 30px 0 30px;
 }
+

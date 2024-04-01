@@ -17,7 +17,7 @@ const InfoLogement = ({ card }) => {
         },
         {
             title: "Equipements",
-            description: card.equipments.join(", "), 
+            description: card.equipments.map((equipment, index) => <span key={index}>{equipment}<br /></span>), 
         },
     ];
     const [activeDescriptions, setActiveDescriptions] = useState(Array(cardsData.length).fill(false));

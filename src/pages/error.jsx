@@ -8,7 +8,7 @@ import Footer from "../components/footer";
 import AboutPage from '../pages/about';
 import ErrorBody from '../components/error';
 
-import "../style/Error.css"
+
 
 
 

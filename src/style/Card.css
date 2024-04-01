@@ -2,13 +2,15 @@
     border: 1px solid #ddd;
     padding: 20px;
     margin: 20px;
-    
+    text-decoration: none;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
     background-color: #ff6060;
     width: 25%;
     border-radius: 10px;
 
-   
+    a{
+      text-decoration: none;
+    } 
 
     img {
       width: 100%;
@@ -17,5 +19,6 @@
 
     h3 {
       color: white;
+      text-align: center;
     }
   }

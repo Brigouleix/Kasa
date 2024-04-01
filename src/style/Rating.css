@@ -32,12 +32,17 @@
     margin-bottom: 20px;
   }
 
-.info-loc,p{
+.info-loc {
   text-align: inherit;
+  p {
+    font-size: inherit;
+  }
 }
   .host {
     display: flex;
-    
+    p {
+      font-size: inherit;
+    }  
 
 
   }
@@ -55,4 +60,5 @@
   .host-name {
     width: min-content;
     margin: 30px;
+    
   }
