@@ -1,7 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+
 import Carousel from './carroussel';
-import Header from './header';
+
 import data from "../assets/data";
 import InfoLogement from './infosLogement';
 import RatingStars from './rating';

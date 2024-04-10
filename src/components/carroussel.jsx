@@ -18,7 +18,7 @@ const Carousel = ({ pictures }) => {
 
   return (
     <div className="carousel-container">
-      <img className="carousel-image" src={pictures[currentIndex]} alt={`Image ${currentIndex + 1}`} />
+      <img className="carousel-image" src={pictures[currentIndex]} alt={` ${currentIndex + 1}`} />
       {pictures.length > 1 && (
         <>
           <div className="arrow left" onClick={goToPrevious}><FontAwesomeIcon icon={faAngleLeft} /></div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import "../style/Card.css"; 
-import data from '../assets/data';
+
 
 const Card = ({ id, title, cover }) => {
   return (

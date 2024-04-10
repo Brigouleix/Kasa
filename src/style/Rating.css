@@ -1,10 +1,12 @@
 /* Ajoutez ces styles à votre fichier CSS */
 .star-filled {
     color: #ff6060; /* Couleur de l'étoile remplie */
+    width: 10%;
   }
   
   .star-empty {
     color: #E3E3E3; /* Couleur de l'étoile vide */
+    width: 10%;
   }
   
 
@@ -38,6 +40,11 @@
     font-size: inherit;
   }
 }
+
+.rating-stars{
+  justify-content: end;
+  display: flex;
+}
   .host {
     display: flex;
     p {
@@ -61,4 +68,39 @@
     width: min-content;
     margin: 30px;
     
+  }
+
+  @media (max-width: 794px) {
+    .rating-stars {
+      align-content: center;
+      display: block;
+    }
+
+    .host{
+      width: 75%;
+      justify-content: end;
+      
+    }
+
+    .host-rating-container {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      height: 60px;
+      margin-top: 15px;
+    }
+
+    .host-name{
+      align-content: center;
+    }
+
+    .tags-info-container {
+      display: flex;
+      flex-direction: column;
+      font-size: x-large;
+    }
+
+    .container{
+      flex-direction: column;
+    }
   }

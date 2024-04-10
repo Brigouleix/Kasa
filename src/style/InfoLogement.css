@@ -52,3 +52,23 @@
     width: 100%;
  }
  
+ .container {
+  display: flex;
+  justify-content: space-between;
+ }
+
+ @media (max-width: 794px) {
+  .volets-logement {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .volet-container-logement{
+    flex-direction: column;
+  }
+
+  .description-logement {
+    text-align: left;
+  }
+
+}

@@ -11,7 +11,7 @@ const ErrorBody = () => {
 
             <h1>404</h1>
             <p>Oups! La page que vous avez demandez n'existe pas.</p>
-            <p><Link to="/">Retourner sur la page d'accueil</Link></p>
+            <p className='backHome'><Link to="/">Retourner sur la page d'accueil</Link></p>
 
         </div>
 

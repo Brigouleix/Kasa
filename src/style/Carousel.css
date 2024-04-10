@@ -9,7 +9,7 @@
   
   .carousel-image {
     width: 100%;
-    height: 550px;
+    max-height: 550px;
     object-fit: cover;
     border-radius: 15px;
   }
@@ -23,7 +23,7 @@
     
     border: none;
     outline: none;
-    transition: background-color 0.3s ease; /* Ajoutez une transition d'arrière-plan pour une animation en douceur */
+    transition: background-color 0.3s ease; 
   }
   
  
@@ -45,3 +45,11 @@
     font-size: 1em;
   }
   
+
+
+  @media (max-width: 794px) {
+    .arrow {
+        
+        font-size: inherit;
+    }
+}

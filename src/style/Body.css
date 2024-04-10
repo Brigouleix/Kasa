@@ -1,5 +1,9 @@
 /* Body.scss */
 
+
+
+
+@media (min-width: 1060px) {
   
   .cards-container {
     display: flex;
@@ -12,8 +16,37 @@
     
 
     margin: 15px 30px 15px 30px;
+  }
 }
+
+
+
+
 
 body {
   font-family: 'Montserrat', sans-serif;
+}
+
+
+/* Media query pour une largeur d'écran supérieure ou égale à 1060px */
+
+
+/* Media query pour une largeur d'écran inférieure à 1060px et supérieure ou égale à 700px */
+@media (max-width: 1059px) and (min-width: 700px) {
+  .cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    
+    justify-content: space-evenly;
+  }
+}
+
+/* Media query pour une largeur d'écran inférieure à 700px */
+@media (max-width: 699px) {
+  .cards-container {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    object-fit: contain;
+  }
 }

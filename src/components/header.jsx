@@ -2,9 +2,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import AboutPage from '../pages/about';
+
 import logo from "../assets/logo.png"
 import "../style/Header.css"
+
+
 const Header = () => {
   return (
     <header>
@@ -12,7 +14,7 @@ const Header = () => {
       <div className="logo-nav">
         <div>
           <Link to="/">
-            <img src={logo} alt="Logo Kasa" />
+            <img className='logo' src={logo} alt="Logo Kasa" />
           </Link>
         </div>
         <nav className= "nav-link">

@@ -51,3 +51,16 @@
 .scroll-down.rotated {
   transform: rotate(-180deg);
 }
+
+@media (max-width: 794px) {
+  .bodyAbout{
+    margin: initial;
+  }
+  .volet-container {
+    width: 100%;
+  }
+
+  .volets {
+    width: 100%;
+  }
+}
