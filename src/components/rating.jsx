@@ -8,15 +8,15 @@ const RatingStars = ({ card }) => {
     <div className="container">
       <div className="tags-info-container">
         <div className="info-loc">
-          <div className="titre" key={card.id}>
+          <div className="titre" >
             <h3 className="title-item">{card.title}</h3>
           </div>
-          <div className="location" key={card.id}>
+          <div className="location" >
             <p className="title-location">{card.location}</p>
           </div>
         </div>
         <div className="tags-container">
-          <div key={card.id} className="tag">
+          <div className="tag">
             {card.tags.map((tag, index) => (
               <span key={index} className="tag-item">
                 {tag}
@@ -27,7 +27,7 @@ const RatingStars = ({ card }) => {
       </div>
 
       <div className="host-rating-container">
-        <div className="host" key={card.id}>
+        <div className="host" >
           <p className="host-name">{card.host.name}</p>
           <img
             className="host-profile"

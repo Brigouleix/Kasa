@@ -42,7 +42,7 @@
 }
 
 .rating-stars{
-  justify-content: end;
+  justify-content: flex-end;
   display: flex;
 }
   .host {
