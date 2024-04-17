@@ -52,4 +52,8 @@
         
         font-size: inherit;
     }
+
+    .slide-number {
+      display: none;
+    }
 }

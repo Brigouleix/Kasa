@@ -6,6 +6,7 @@ import data from "../assets/data";
 import InfoLogement from './infosLogement';
 import RatingStars from './rating';
 import { useParams } from "react-router-dom";
+import ErrorBody from '../components/error';
 
 
 
@@ -19,6 +20,9 @@ const BodyLogement = () => {
     const card = data.find(
       (card) => card.id === id
     );
+    if (!card){
+      return < ErrorBody /> 
+  }
     
     return (
       <div className="logementBody">

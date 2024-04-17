@@ -30,8 +30,16 @@
       padding: 10px;
       display: block;
       border-radius: 0 0 5px 5px;
-      
+      opacity: 0; /* Commencez avec une opacité à 0 pour le cacher initialement */
+      transition: opacity 0.45s ease-in-out; /* Ajoutez une transition pour l'opacité */
+      transform: translateY(-0px); /* Déplacez l'élément vers le haut */
+      height: 0;
     }
+    .description-logement.visible {
+      opacity: 1; /* Faites apparaître le contenu en augmentant l'opacité */
+      transform: translateY(0); /* Remettez l'élément à sa position originale */
+      height: max-content;
+  }
   }
   
   .scroll-down {

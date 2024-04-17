@@ -1,4 +1,3 @@
-// BodyAbout.jsx
 import React, { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleUp } from '@fortawesome/free-solid-svg-icons';
@@ -24,12 +23,10 @@ const cardsData = [
 ];
 
 const BodyAbout = () => {
-  const [activeDescriptions, setActiveDescriptions] = useState(Array(cardsData.length).fill(false));
+  const [activeIndex, setActiveIndex] = useState(null);
 
   const toggleContent = (index) => {
-    const newActiveDescriptions = [...activeDescriptions];
-    newActiveDescriptions[index] = !newActiveDescriptions[index];
-    setActiveDescriptions(newActiveDescriptions);
+    setActiveIndex(activeIndex === index ? null : index);
   };
 
   return (
@@ -39,11 +36,13 @@ const BodyAbout = () => {
           <div className="volets" key={index} onClick={() => toggleContent(index)}>
             <div className="title">
               {card.title}
-              <span className={`scroll-down${activeDescriptions[index] ? ' rotated' : ''}`} onClick={(e) => {e.stopPropagation(); toggleContent(index)}}>
+              <span className={`scroll-down${activeIndex === index ? ' rotated' : ''}`} onClick={(e) => {e.stopPropagation(); toggleContent(index)}}>
                 <FontAwesomeIcon icon={faAngleUp} />
               </span>
             </div>
-            {activeDescriptions[index] && <span className="description">{card.description}</span>}
+            <div className={`description${activeIndex === index ? ' visible' : ''}`}>
+              {card.description}
+            </div>
           </div>
         ))}
       </div>

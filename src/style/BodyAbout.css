@@ -12,6 +12,8 @@
   
   color: white;
   width: 80%;
+
+  
   .title {
     background: #FF6060;
     display: flex;
@@ -22,16 +24,26 @@
     align-items: center;
   }
   
-  
-  
-  
+ 
   .description {
     color: #FF6060;
     background-color: #F6F6F6;
     padding: 10px;
-    display: block;
     border-radius: 0 0 5px 5px;
+    opacity: 0;
+    visibility: hidden; /* Masquer l'élément tout en conservant sa place dans le flux du document */
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out; /* Ajouter une transition pour l'opacité et la visibilité */
+    height: 0;
   }
+  
+  .description.visible {
+    opacity: 1;
+    visibility: visible; /* Lorsque la classe .visible est appliquée, rendre l'élément visible */
+    height: max-content;
+    transition: max-height 1s ease-in-out;
+  }
+  
+  
 }
 
 .volet-container {
