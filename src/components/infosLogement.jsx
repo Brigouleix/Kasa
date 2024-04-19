@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleUp } from '@fortawesome/free-solid-svg-icons';
-import "../style/InfoLogement.css";
+
 
 const InfoLogement = ({ card }) => {
     const cardsData = [
@@ -34,7 +34,7 @@ const InfoLogement = ({ card }) => {
                                 <FontAwesomeIcon icon={faAngleUp} />
                             </span>
                         </div>
-                        <span className={`description-logement${activeDescriptions[index] ? ' visible' : ''}`}>{card.description}</span>
+                        <span className={`description-logement${activeDescriptions[index] ? '-visible' : ''}`}>{card.description}</span>
                     </div>
                 ))}
             </div>

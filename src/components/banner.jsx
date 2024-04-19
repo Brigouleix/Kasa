@@ -1,6 +1,6 @@
 import React from 'react';
 import banniere from "../assets/header.png"
-import "../style/Banner.css"
+
 
 
 function Banner() {

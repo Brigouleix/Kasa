@@ -5,7 +5,7 @@ import Banner from "../components/banner";
 
 import Card from "../components/card";
 
-import "../style/Body.css"; 
+
 
 
 import data from "../assets/data"

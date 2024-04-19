@@ -1,8 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import "../style/Error.css"
-import "../style/Header.css"
-
 
 
 const ErrorBody = () => {

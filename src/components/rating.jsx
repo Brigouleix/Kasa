@@ -1,5 +1,5 @@
 import React from "react";
-import "../style/Rating.css";
+
 
 const RatingStars = ({ card }) => {
   const maxStars = 5;

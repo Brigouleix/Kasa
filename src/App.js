@@ -8,7 +8,7 @@ import AboutPage from './pages/about.jsx';
 import ProprietyPage from './pages/propriety.jsx';
 import LogementPage from "./pages/logement.jsx";
 
-import "./style/style.css"
+import "./style/style.css";
 
 
 const App = () => {
