@@ -12,7 +12,12 @@ import ErrorBody from '../components/error';
 
 
 
+function listefy(equipments) {
+  let listEquiepements = "";
+  equipments.map((equipments) => (listEquiepements += ` ${equipments} \n`));
 
+  return listEquiepements;
+}
 
 
 const BodyLogement = () => {
@@ -29,7 +34,15 @@ const BodyLogement = () => {
         
         <Carousel pictures={card.pictures} />
         <RatingStars card={card} />
-        <InfoLogement card={card} />
+        <div className='fiche-collapses'>
+          <div className="collapse">
+          <InfoLogement title="Description" infos={card.description} page="fiche" />
+          </div>
+          <div className="collapse">
+          <InfoLogement title="Equipements" infos={listefy(card.equipments)} page="fiche"/>
+          </div> 
+        </div>
+        
       </div>
     );
   };

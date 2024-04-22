@@ -1,4 +1,7 @@
 /* Ajoutez ces styles à votre fichier CSS */
+
+
+
 .star-filled {
     color: #ff6060; /* Couleur de l'étoile remplie */
     width: 10%;
@@ -44,9 +47,13 @@
 .rating-stars{
   justify-content: flex-end;
   display: flex;
+  justify-content: space-around;
+  font-size:xx-large;
 }
   .host {
     display: flex;
+    align-items: center;
+    flex-wrap: wrap;
     p {
       font-size: inherit;
     }  
@@ -56,6 +63,8 @@
 
   .host-profile {
     border-radius: 50%;
+    width: 55px;
+    height: fit-content;
    
   }
 
@@ -66,14 +75,42 @@
 
   .host-name {
     width: min-content;
-    margin: 30px;
+    margin: 20px;
     
   }
 
+  .container .host-rating-container {
+    color: $primary-red;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @media (max-width: 794px) {
+      
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: center;
+      height: 60px;
+      margin-top: 15px;
+    }
+  }
+
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+  
+    
+  }
   @media (max-width: 794px) {
+    .container{
+      flex-direction: column;
+      
+    }
     .rating-stars {
       align-content: center;
       display: block;
+      
     }
 
     .host{
@@ -82,13 +119,16 @@
       
     }
 
+    
+  
     .host-rating-container {
       display: flex;
       flex-direction: row-reverse;
-      justify-content: space-between;
+      justify-content: center;
       height: 60px;
       margin-top: 15px;
     }
+  
 
     .host-name{
       align-content: center;
@@ -100,7 +140,7 @@
       font-size: x-large;
     }
 
-    .container{
-      flex-direction: column;
-    }
+    
   }
+
+

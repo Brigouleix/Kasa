@@ -55,83 +55,128 @@ section {
   background-color: black;
 }
 
-.localisation {
+.fiche-collapses {
   display: flex;
-}
-
-.logementBody {
-  margin: 15px 30px 15px 30px;
-}
-
-.volets-logement {
-  margin: 10px 0px 10px 0px;
-  width: 46%;
-  color: white;
-}
-.volets-logement .title {
-  background: #FF6060;
-  display: flex;
+  flex-direction: row;
   justify-content: space-between;
-  padding: 5px;
-  border-radius: 5px;
-  height: 35px;
-  align-items: center;
+  margin: 5px 0;
 }
-.volets-logement .description-logement {
-  color: #FF6060;
-  background-color: #F6F6F6;
-  padding: 10px;
-  border-radius: 0 0 5px 5px;
-  opacity: 0;
-  grid-template-rows: 0fr;
-  transition: grid-template-rows 2s ease-in-out;
-  overflow: hidden;
-  transform: translateY(0px);
-  height: 0;
-}
-.volets-logement .description-logement.visible {
-  opacity: 1;
-  transform: translateY(0);
-  height: max-content;
-  grid-template-rows: 0fr;
-  transition: grid-template-rows 2s ease-in-out;
-  overflow: hidden;
-}
-
-.scroll-down {
-  cursor: pointer;
-  font-size: 18px;
-  margin-left: 10px;
-  transition: transform 0.3s ease;
-}
-
-.scroll-down.rotated {
-  transform: rotate(-180deg);
-}
-
-.volet-container-logement {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.container {
-  display: flex;
-  justify-content: space-between;
+.fiche-collapses .collapse {
+  width: 45%;
 }
 
 @media (max-width: 794px) {
-  .volets-logement {
-    width: 100%;
-    text-align: center;
-  }
-  .volet-container-logement {
+  .fiche-collapses {
+    display: flex;
     flex-direction: column;
+    margin: 20px 0;
   }
-  .description-logement {
-    text-align: left;
+  .fiche-collapses .collapse {
+    width: 100%;
   }
 }
+.collapse-bar {
+  width: 100%;
+  margin: 5px 0px;
+  position: relative;
+  height: auto;
+}
+.collapse-bar div {
+  margin: 0px;
+  padding: 5px 15px;
+}
+.collapse-bar .collapse-content {
+  position: relative;
+  z-index: -5;
+  top: -10px;
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.4s ease-in-out;
+  overflow: hidden;
+}
+.collapse-bar .collapse-content-show {
+  grid-template-rows: 1fr;
+}
+.collapse-bar .collapse-content-hide {
+  grid-template-rows: 0fr;
+}
+.collapse-bar .collapse-header {
+  background-color: #FF6060;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  color: white;
+  cursor: pointer;
+  z-index: 100;
+}
+.collapse-bar .collapse-header h2 {
+  margin: 0px;
+  font-size: 18px;
+  font-weight: 500;
+}
+.collapse-bar .collapse-header img {
+  height: 32px;
+  transform: rotate(-90deg);
+}
+.collapse-bar .collapse-header .arrow-down {
+  transition: transform 400ms ease-in-out;
+  transform: rotate(90deg);
+}
+.collapse-bar .collapse-header .arrow-up {
+  transition: transform 400ms ease-in-out;
+  transform: rotate(-90deg);
+}
+.collapse-bar .header-about {
+  border-radius: 5px;
+}
+.collapse-bar .header-about h2 {
+  font-size: 24px;
+}
+.collapse-bar .collapse-infos {
+  background-color: #F6F6F6;
+  color: #FF6060;
+  font-size: large;
+  text-align: justify;
+  position: relative;
+  padding-top: 10px;
+  overflow: hidden;
+}
+.collapse-bar .collapse-infos p {
+  line-height: 22px;
+  white-space: pre-line;
+  color: black;
+}
+.collapse-bar .p-show {
+  transition: all 400ms ease-in-out;
+  transform: translateY(0%);
+}
+.collapse-bar .p-hide {
+  transition: all 400ms ease-in-out;
+  transform: translateY(-150%);
+}
+@media (max-width: 794px) {
+  .collapse-bar {
+    margin: 1px 0px;
+  }
+  .collapse-bar .collapse-header {
+    height: 30px;
+    border-radius: 5px;
+  }
+  .collapse-bar .collapse-header h2 {
+    font-size: 14px;
+  }
+  .collapse-bar .collapse-header img {
+    height: 20px;
+  }
+  .collapse-bar .collapse-infos p {
+    line-height: 18px;
+    font-size: 12px;
+  }
+}
+
 .logo-nav {
   display: flex;
   justify-content: space-between;
@@ -218,10 +263,14 @@ section {
 .rating-stars {
   justify-content: flex-end;
   display: flex;
+  justify-content: space-around;
+  font-size: xx-large;
 }
 
 .host {
   display: flex;
+  align-items: center;
+  flex-wrap: wrap;
 }
 .host p {
   font-size: inherit;
@@ -229,6 +278,8 @@ section {
 
 .host-profile {
   border-radius: 50%;
+  width: 55px;
+  height: fit-content;
 }
 
 h3 {
@@ -237,10 +288,34 @@ h3 {
 
 .host-name {
   width: min-content;
-  margin: 30px;
+  margin: 20px;
+}
+
+.container .host-rating-container {
+  color: #FF6060;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media (max-width: 794px) {
+  .container .host-rating-container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    height: 60px;
+    margin-top: 15px;
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
 }
 
 @media (max-width: 794px) {
+  .container {
+    flex-direction: column;
+  }
   .rating-stars {
     align-content: center;
     display: block;
@@ -252,7 +327,7 @@ h3 {
   .host-rating-container {
     display: flex;
     flex-direction: row-reverse;
-    justify-content: space-between;
+    justify-content: center;
     height: 60px;
     margin-top: 15px;
   }
@@ -263,9 +338,6 @@ h3 {
     display: flex;
     flex-direction: column;
     font-size: x-large;
-  }
-  .container {
-    flex-direction: column;
   }
 }
 /* Body.scss */
@@ -326,13 +398,13 @@ body {
   padding: 10px;
   border-radius: 0 0 5px 5px;
   opacity: 0;
-  visibility: hidden; /* Masquer l'élément tout en conservant sa place dans le flux du document */
-  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out; /* Ajouter une transition pour l'opacité et la visibilité */
+  visibility: hidden;
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
   height: 0;
 }
 .volets .description.visible {
   opacity: 1;
-  visibility: visible; /* Lorsque la classe .visible est appliquée, rendre l'élément visible */
+  visibility: visible;
   height: max-content;
   transition: max-height 1s ease-in-out;
 }
@@ -347,7 +419,7 @@ body {
   cursor: pointer;
   font-size: 18px;
   margin-left: 10px;
-  transition: transform 0.3s ease;
+  transition: transform 0.6s ease;
 }
 
 .scroll-down.rotated {
@@ -503,7 +575,7 @@ body {
   font-size: 0.5em;
 }
 
-p {
+.errorText {
   color: #FF6060;
   font-size: 3.5em;
 }

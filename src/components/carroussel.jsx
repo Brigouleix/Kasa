@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../style/Carousel.css"; 
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleLeft } from '@fortawesome/free-solid-svg-icons';
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons';

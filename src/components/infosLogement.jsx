@@ -1,45 +1,45 @@
-import React, { useState } from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleUp } from '@fortawesome/free-solid-svg-icons';
-import "../style/InfoLogement.css";
+import PropTypes from 'prop-types';
+import { useState } from 'react';
+import React from 'react';
+import arrowRight from '../assets/arrow-right.png'; 
 
-const InfoLogement = ({ card }) => {
-    const cardsData = [
-        {
-            title: "Description",
-            description: card.description,
-        },
-        {
-            title: "Equipements",
-            description: card.equipments.map((equipment, index) => <span key={index}>{equipment}<br /></span>), 
-        },
-    ];
+function InfoLogement({ title, infos, page }) { 
+    
+    console.log(infos);
+    const [isOpen, setOpen] = useState(false) 
 
-    const [activeDescriptions, setActiveDescriptions] = useState(Array(cardsData.length).fill(false));
-    
-    const toggleContent = (index) => {
-        const newActiveDescriptions = [...activeDescriptions];
-        newActiveDescriptions[index] = !newActiveDescriptions[index];
-        setActiveDescriptions(newActiveDescriptions);
-    };
-    
+    const toggleInfoLogement = () => { 
+        setOpen(!isOpen); 
+    }
+
     return (
-        <div className="bodyAbout">
-            <div className="volet-container-logement">
-                {cardsData.map((card, index) => (
-                    <div className="volets-logement" key={index} onClick={() => toggleContent(index)}>
-                        <div className="title">
-                            {card.title}
-                            <span className={`scroll-down${activeDescriptions[index] ? ' rotated' : ''}`} onClick={(e) => {e.stopPropagation(); toggleContent(index)}}>
-                                <FontAwesomeIcon icon={faAngleUp} />
-                            </span>
-                        </div>
-                        <span className={`description-logement${activeDescriptions[index] ? ' visible' : ''}`}>{card.description}</span>
-                    </div>
-                ))}
-            </div>
-        </div>
-    );
-};
+        <article className="collapse-bar"> {}
+            <div className={page === "fiche" ? 'collapse-header header-fiche' : 'collapse-header header-about'} onClick={toggleInfoLogement}> {}
+                <h2>{title}</h2>
+                <img src={arrowRight} alt="arrow" className={isOpen ? "arrow-down" : "arrow-up"} /> {
 
-export default InfoLogement;
+                }
+            </div>
+            {
+                 }
+            <section className={isOpen ? "collapse-content collapse-content-show" : "collapse-content collapse-content-hide"}>
+                <div className={isOpen ? "collapse-infos p-show" : "collapse-infos p-hide"}>
+                    <p>{infos}</p>
+                </div>
+            </section>
+        </article>
+    )
+}
+
+InfoLogement.propTypes = { 
+    title: PropTypes.string,
+    infos: PropTypes.string,
+}
+
+InfoLogement.defaultProps = { 
+    title: "Title",
+    infos: "Informations",
+}
+
+
+export default InfoLogement
