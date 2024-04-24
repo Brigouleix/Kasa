@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleUp } from '@fortawesome/free-solid-svg-icons';
-import InfoLogement from "./infosLogement";
+import InfoLogement from "./Collapse";
+import Collapse from "./Collapse";
 
 const cardsData = [
   {
@@ -34,7 +35,7 @@ const BodyAbout = () => {
       
 
       {cardsData.map((card, index) => (
-        <InfoLogement key={index} title={card.title} infos={card.description} page="fiche" />
+        <Collapse key={index} title={card.title} infos={card.description} page="fiche" />
       ))}
       </div>  
     </div>

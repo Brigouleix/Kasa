@@ -3,7 +3,7 @@ import { useState } from 'react';
 import React from 'react';
 import arrowRight from '../assets/arrow-right.png'; 
 
-function InfoLogement({ title, infos, page }) { 
+function Collapse({ title, infos, page }) { 
     
     console.log(infos);
     const [isOpen, setOpen] = useState(false) 
@@ -31,15 +31,15 @@ function InfoLogement({ title, infos, page }) {
     )
 }
 
-InfoLogement.propTypes = { 
+Collapse.propTypes = { 
     title: PropTypes.string,
     infos: PropTypes.string,
 }
 
-InfoLogement.defaultProps = { 
+Collapse.defaultProps = { 
     title: "Title",
     infos: "Informations",
 }
 
 
-export default InfoLogement
+export default Collapse

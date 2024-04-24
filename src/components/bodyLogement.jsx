@@ -3,10 +3,11 @@ import React from 'react';
 import Carousel from './carroussel';
 
 import data from "../assets/data";
-import InfoLogement from './infosLogement';
+import InfoLogement from './Collapse';
 import RatingStars from './rating';
 import { useParams } from "react-router-dom";
 import ErrorBody from '../components/error';
+import Collapse from './Collapse';
 
 
 
@@ -36,10 +37,10 @@ const BodyLogement = () => {
         <RatingStars card={card} />
         <div className='fiche-collapses'>
           <div className="collapse">
-          <InfoLogement title="Description" infos={card.description} page="fiche" />
+          <Collapse title="Description" infos={card.description} page="fiche" />
           </div>
           <div className="collapse">
-          <InfoLogement title="Equipements" infos={listefy(card.equipments)} page="fiche"/>
+          <Collapse title="Equipements" infos={listefy(card.equipments)} page="fiche"/>
           </div> 
         </div>
         
