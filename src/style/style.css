@@ -65,6 +65,16 @@ section {
   width: 45%;
 }
 
+.fiche-collapses-about {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  align-items: center;
+}
+.fiche-collapses-about .collapse {
+  width: 80%;
+}
+
 @media (max-width: 794px) {
   .fiche-collapses {
     display: flex;
@@ -72,6 +82,14 @@ section {
     margin: 20px 0;
   }
   .fiche-collapses .collapse {
+    width: 100%;
+  }
+  .fiche-collapses-about {
+    display: flex;
+    flex-direction: column;
+    margin: inherit;
+  }
+  .fiche-collapses-about .collapse {
     width: 100%;
   }
 }

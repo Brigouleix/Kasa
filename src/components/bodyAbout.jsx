@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleUp } from '@fortawesome/free-solid-svg-icons';
-
+import InfoLogement from "./infosLogement";
 
 const cardsData = [
   {
@@ -23,30 +23,22 @@ const cardsData = [
 ];
 
 const BodyAbout = () => {
-  const [activeIndex, setActiveIndex] = useState(null);
-
-  const toggleContent = (index) => {
-    setActiveIndex(activeIndex === index ? null : index);
-  };
-
+  
+  
   return (
-    <div className="bodyAbout">
-      <div className="volet-container">
-        {cardsData.map((card, index) => (
-          <div className="volets" key={index} onClick={() => toggleContent(index)}>
-            <div className="title">
-              {card.title}
-              <span className={`scroll-down${activeIndex === index ? ' rotated' : ''}`} onClick={(e) => {e.stopPropagation(); toggleContent(index)}}>
-                <FontAwesomeIcon icon={faAngleUp} />
-              </span>
-            </div>
-            <div className={`description${activeIndex === index ? ' visible' : ''}`}>
-              {card.description}
-            </div>
-          </div>
-        ))}
-      </div>
+
+      
+    <div className='fiche-collapses-about'>
+      <div className="collapse">
+      
+      
+
+      {cardsData.map((card, index) => (
+        <InfoLogement key={index} title={card.title} infos={card.description} page="fiche" />
+      ))}
+      </div>  
     </div>
+  
   );
 };
 
