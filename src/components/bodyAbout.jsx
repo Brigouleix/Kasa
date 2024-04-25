@@ -1,7 +1,4 @@
-import React, { useState } from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleUp } from '@fortawesome/free-solid-svg-icons';
-import InfoLogement from "./Collapse";
+import React from "react";
 import Collapse from "./Collapse";
 
 const cardsData = [

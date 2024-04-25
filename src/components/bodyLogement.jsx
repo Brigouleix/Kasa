@@ -3,7 +3,7 @@ import React from 'react';
 import Carousel from './carroussel';
 
 import data from "../assets/data";
-import InfoLogement from './Collapse';
+
 import RatingStars from './rating';
 import { useParams } from "react-router-dom";
 import ErrorBody from '../components/error';
